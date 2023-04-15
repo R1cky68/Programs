@@ -1,0 +1,39 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+  int n;
+  do
+  {
+    // Getting input for n so valid integer
+    n = get_int("Size ");
+
+  }
+
+  // getting n between 1-8
+  while (n < 1 || n > 8);
+
+// Prints row
+  for (int i = 0; i < n; i++)
+
+    {
+      // Spaces
+    for (int s = 0; s < n - i - 1; s++)
+    {
+      printf(" ");
+
+    }
+      // Prints column
+      for (int j = 0; j <= i; j++)
+      {
+
+        // One brick
+
+        printf("#");
+      }
+
+    // New line
+    printf("\n");
+    }
+}
