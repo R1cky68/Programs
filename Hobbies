@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name ="viewport" content="initial-scale=1, width=device-width">
+        <title>My hobbies</title>
+        <div class ="container">
+        <div class ="title"> <h1> Hargun Singh</h1> </div>
+    </head>
+    <body>
+
+        <div class="header"> <p> Welcome to the hobbies section! I'll expand on more in a bit. But you can go home if you click below. </div>
+            <nav class ="navbar navbar-expand-lg bg-light" style ="padding:10px; opacity: 0.5;">
+                <button class ="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <img src="Hamburger_icon.svg.png" alt="icon" height="40" width="40"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class ="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="https://r1cky68-didactic-space-goggles-v6vjvj9pp7q2xrrp-8080.preview.app.github.dev/index.html"> Index </a> </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="https://r1cky68-didactic-space-goggles-v6vjvj9pp7q2xrrp-8080.preview.app.github.dev/history.html">History</a> </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="https://r1cky68-didactic-space-goggles-v6vjvj9pp7q2xrrp-8080.preview.app.github.dev/insights.html">Insights</a> </li>
+             <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="https://r1cky68-didactic-space-goggles-v6vjvj9pp7q2xrrp-8080.preview.app.github.dev/future.html">Future</a> </li>
+            </ul>
+            </div>
+        </nav>
+
+            <div class ="body">
+            <h4> Hobbies </h4>
+                <p> These are my hobbies here. People have said I have a wide range of interests. My most prominent one is gaming. I really enjoy console and PC gaming alike, whether it's casual or competitive.
+                    I have played a wide variety of games, ranging from retro ones on an emulator to modern multiplayer ones. My favourite genres are action-adventure open world games, I really enjoy exploring these fictional landscapes, getting stronger and lost in the flow of the game.
+                    I also enjoy party games when I'm playing with my friends, but don't mind playing more competitively from time to time. I would like to get into more shooters again but there's no good ones currently and I do kinda get bored of them.
+                    Regardless some of my all-time favourite games include the following. Click the button to get more explanation. </p>
+
+                    <button class = "game" onclick="explain1()"> Legend of Zelda: Breath of the Wild </button>
+                        <button class = "game" onclick="explain2()"> Pokemon </button>
+                        <button class = "game" onclick="explain3()"> Minecraft </button>
+                        <button class = "game" onclick="explain4()"> Super Smash Bros </button>
+                        <button class = "game" onclick="explain5()"> DOOM Eternal </button>
+                        <button class = "game" onclick="explain6()"> Spiderman PS4 </button>
+                        <button class = "game" onclick="explain7()"> Grand Theft Auto: Vice City </button>
+                        <button class = "game" onclick="explain8()"> Mario franchise </button>
+                        <button class = "game" onclick="explain9()"> Mega Man franchise </button>
+                        <button class = "game" onclick="explain10()"> Legend of Zelda: Majoras Mask </button>
+
+    <p> So you can tell I like gaming. But I enjoy technology in general, just learning about it and different components. It's marvelous to me how it works and part of the reason I enrolled in coding courses like CS50 and am making this website as a result. I am also into movies, generally superhero, horror, action and comedy ones. I watched loads of MCU movies over the years, but appreciate good action ones like John Wick, Mission Impossible and more.
+        There's honestly too many to list here. But I'd always watch horror movies with my brother (and still do) which has given me an appreciation for them. Horror moves are something special, always a thrill ride.
+        I like comedy movies but usually when it's a part of another one. I've also watched my fair share of bollywood movies, don't really have any favourites but there's a number I've seen. They all blend together after a while. </p>
+
+    <p> All this being said, I really enjoy being outdoors as well. In particular, walking, hiking and cycling. It's because of that general sense of adventure around my place. It shows me how big the world really is and always a treat to find new places, usually in nature that I can marvel at. Walking is slower and more chill, favourite times is in morning or late afternoon. But I also don't mind midday despite the heat. Cycling is more high octane and for the thrill. I particularly like mountain biking and want to get more into that. I had a mountain bike but had to sell it, keen for a new one. I am always on the lookout for more places to go to and enjoy like that, even in the city or out.
+        I've played a variety of sport throughout the years. My favourites are hockey, volleyball, cricket and basketball. These were mainly in high school except for cricket and I'd usually have a good time. They're great with people you know and I prefer casually. I also hit the gym a lot in 2021 but have been rather slack due to uni now. I don't mind going it's just the bulking and diet required to make sufficient progress.
+        Going out for parties or nightclubs is also fun. I'm a fan of house parties more but clubs are also good. You just need a fair amount of people to get turnt up and truly enjoy it. It can get repetitve and expensive but I am usually down to go for it.
+    </p>
+
+    <div class ="footer"> <p> This is a footer, right now just for formatting purposes. Hargun Singh, 2023 </p> </div>
+
+        </div> <!--body div close-->
+
+    </body>
+</div> <!-- container div close-->
+
+    <script src="script.js"> </script>
+</html>
