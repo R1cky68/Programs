@@ -1,0 +1,11 @@
+sort1 uses: TODO Bubble sort
+
+How do you know?: 0.09075 average. Middle ground, faster than selection sort one (sort3) but slower than sort2 (merge sort) particularly for large numbers. Process of elimination. Does better for sorted numbers but similar for random numbers.
+
+sort2 uses: TODO Merge sort 0.07825
+
+How do you know?: Shortest time average, since that algorithm is the fastest one for random numbers. It is also fastest for sorted numbers, as it only touches them once hence doesn't repeat itself unlike the other 2 algorithms.
+
+sort3 uses: TODO Selection sort
+
+How do you know?: 0.1035 average speed, so slowest algorithm overall. Especially apparent with larger numbers, it is the most inefficient one. It does do alright in random 5k but as the numbers increase it does worse. Selection sort also does worse when they're already sorted since it's repeating itself.
