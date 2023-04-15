@@ -1,0 +1,29 @@
+task = input('Add, subtract, multiply or divide? ')
+
+x = input('First number: ')
+y = input('Second number: ')
+
+sum = int(x) + int(y)
+difference = int(x) - int(y)
+product = int(x) * int(y)
+divide = int(x) / int(y)
+
+if (task == 'add'): {
+    print('Result is', sum)
+}
+
+elif (task == 'subtract'): {
+    print('Result is', difference)
+}
+
+elif (task == 'multiply'): {
+    print('Result is', product)
+}
+
+elif (task == 'divide'): {
+print('Result is', divide)
+}
+
+else: {
+    print('Not valid')
+}
