@@ -1,0 +1,33 @@
+function explain1() {
+    alert("This is my gold standard video game and distills the best parts of one. I was dying to play it and finally got the chance as a birthday present. I was pretty new to the Zelda franchise at the time and going in blind to this game was a breathtaking experience. So much to explore, fight, upgrade, solve, learn and sink your teeth into. The physics engine and mechanics are amazing and this game you can only experience once. Because that pure wonder of not knowing how the world is, and the desire to explore it can't be replicated. This game got me into the Zelda franchise and I've played most games since.")
+}
+
+function explain2() {
+    alert("Namely Black 2/White 2, HeartGold/SoulSilver, Firered/Leafgreen, Scarlet/Violet and Legends:Arceus, not to mention all the ROM hacks. Key ROM hacks include Pokemon Light Platinum, Sacred Gold/Storm Silver, Blaze Black/Volt White 2, Gaia, Glazed, Dark Rising, Ruby Destiny, Ash Gray and more. It's incredibly nostalgic for me and hits all the right beats. There's also the anime I got invested into sometimes. ")
+}
+function explain3() {
+    alert("Another super nostalgic game that's full of endless replayability. It's much more social however and I've got loads of memories playing with my brother, cousins and friends. It's still evolving to this day and I love to see it.")
+}
+function explain4() {
+    alert("Great fighting game with a diverse roster. It's fun both casually within a party setting or competetively in tournaments. I have nostalgia for the 3DS and Wii U versions, but ultimate is the best. Its soundtrack is also amazing and I love all the remixes.")
+}
+function explain5() {
+    alert("The shooter I've gotten the most into. It's got a really satisfying gameplay loop that promotes aggression and movement. You really feel the adrenaline particularly during difficult parts and when you win it's incredibly rewarding. The game is so good my brother watched me play, dissed it, I let him play and he ended up beating it lol.")
+}
+function explain6() {
+    alert("Just a great representation of the character with amazing traversal, exploration, combat and story. They really knocked it out of the park and I can't wait for more.")
+}
+
+function explain7() {
+    alert("Was wayy too young to be playing this but really fun at the time, and even know. Just being able to drive anywhere, shoot people, find monkeys, and do fun missions in the campaign. You had complete control of what you wanted to do and that's a great thing. I like how non hand-holdy it is. So goofy yet fun with the animations, models and dialogue.")
+}
+
+function explain8() {
+    alert(" Who hasn't played it? It's reliably good platformers, you never get bored of it. Each game was short enough to not overstay its welcome. I enjoyed the 2D and 3D games alike and it was a simple concept that can be stretched so far as they keep building on it.")
+}
+function explain9() {
+    alert(" Somewhat similar to Mario, except with a more retro feel. It's not as advanced but I liked the non-linear progression of each game. It's fun messing with different powers and seeing what order you want to do. The soundtrack is incredible and I'm impressed it's still a banger each time, with just 8-bit music. I really want this franchise to succeed moving forward. I enjoyed the Mega Man X games too, from X1-X6.")
+}
+function explain10() {
+    alert(" This is the weirdest game on the list. It has this dreamlike atmosphere that I initially didn't like but now it really stands out. It's not trying to compete with OOT but borrows most the assets. The story is poignant and full of subtext, dealing with themes of grief, loss, belonging, friendship and acceptance. Even the circumstances with the 3 day cycle is weird. It's not the game I explored the most or enjoyed when I started playing, but upon revisitng it hits you like no other. The song of healing in particular, combined with the N64 visuals, and the world, it's just bizarre, yet soothing, recent and nostalgic all at once. Really hard to describe this into words.")
+}
