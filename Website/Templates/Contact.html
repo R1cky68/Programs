@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}"  type="text/css">
+    <meta name ="viewport" content="initial-scale=1, width=device-width">
+    <title> Contact </title>
+    <div class = "navigation"> 
+        <ul> 
+            <div class="items" style="padding-top:10px;"> 
+                <li> <a class="nav-link" href="{{ url_for('homepage') }}"> Home</a></li> 
+                <li> <a class="nav-link" href="{{ url_for('programs') }}"> Programs</a></li> 
+                <li style ="text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 8.5px;;"> <a class="nav-link" href="{{ url_for('contact') }}"> Contact</a></li> 
+            </div>
+
+           <div class="socials"> 
+            <ul> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/IG.png') }}" style="width:60px; height:60px;" alt="Instagram"> </a> </img></li> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/YT.png') }}" style="width:60px; height:60px;" alt="Twitch"> </a> </img> </li>
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/Twitch.png') }}" style="width:60px; height:60px;" alt="Youtube"> </a> </img> </li>
+    
+            </ul>
+            </div>
+        </ul>
+        
+    </div>
+    
+    <div class = "container"> 
+    </head>
+    <body>
+        <h1 style ="text-align:center; margin-bottom:100px; margin-top:120px;"> Further inquiries? </h1>
+        <div class="form">
+            <form method="POST" id="filling" action="fill"> 
+            <div class="field"> 
+                <input name ="name" type="text" style="width:550px; height:63px; font-size:24px; border-style:none; color:black;" autocomplete="off" placeholder="Hargun Singh">
+            </div>
+            <div class="field">
+                <input name="mail" type="text" style="width:550px; height:63px; font-size:24px; border-style:none; color:black;" autocomplete="off" placeholder="hargun_dadyala75@hotmail.com.au">
+            </div>
+            <div class="message">
+                <textarea name="paragraph" autocomplete="off" placeholder="This is the best website ever!" style="width:550px; height:300px; font-size:24px; border-style:none; color:black; font-family:Inter;"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="send" style="width:200px; height:50px; background-color:#0AE33A; margin-left:175px; border-radius:5px; margin-top:20px; font-size:20px; border:none; cursor:pointer;">
+        </form>
+        </div>
+
+        <div class ="details"> 
+            <h2 style="text-align:center; font-weight: normal;"> Getting in touch is easy!</h2>
+            <ul> 
+               <li class="info"><img src="{{ url_for('static', filename='assets/Email.png') }}" style="width:70px; height:50px; margin-right:10px;" alt="Email"> <p style="margin-top:-40px; margin-left:90px;">hargun_dadyala75@hotmail.com.au </p></li>
+                <li class="info"><img src="{{ url_for('static', filename='assets/Phone.png') }}" style="width:60px; height:60px; margin-right:10px;" alt="Phone"> <p style="margin-top:-45px; margin-left:90px;">0470 642 280</p></li>
+                <li class="info"><img src="{{ url_for('static', filename='assets/Location.png') }}" style="width:70px; height:50px; margin-right:10px;" alt="Location"> <p style="margin-top:-40px; margin-left:90px;">1 Carfrae Avenue Underwood, QLD, 4119</p></li>
+                <li class="info"><img src="{{ url_for('static', filename='assets/Github.png') }}" style="width:60px; height:60px; margin-right:10px;" alt="Github"> <p style="margin-top:-45px; margin-left:90px;">R1cky68</p></li>
+            </ul>
+
+        </div>
+
+        <div class="FAQ">
+            <h1 style="margin-top:200px;"> FAQ</h1>
+            <button class="Q" style="margin-top:-20px;">What brought you into programming?</button>
+                <div class="A"> "I always liked technology growing up, whether that's playing video games, watching movies or even messing with electronics when I got the chance. It was quite enthralling to me. So naturally I drew towards programming as it gave me a chance to understand how all this works and how I can manipulate for countless purposes. It's almost magical in a way."
+            </div>
+
+            <button class="Q">Is this website fully functional?</button>
+                <div class="A"> "So this website does have all the front and back end aspects loaded onto it. However it runs on a http server, which is a development server. Hence if this were to expand, I'd need to use a production WSGI instead. Not to mention, I'd need to pay for a domain name and the maintainence costs."
+            </div>
+        
+            <button class="Q">What's the purpose of this website?</button>
+                <div class="A"> "This was more of a personal project for me. A chance to undertake in a full stack project that not only brings together skills I've done in the past (web design) but also makes me learn hard and soft skills. These include back-end development (I was unfamiliar with Flask and SQLAlchemy for the database), project management, problem solving and designing. On top of this, I thought it'd be a cool way to celebrate my progress by showing off all my past work on here. This is the longest project by far I've done, so felt like a fitting conclusion. Who knows if it pays off down the line too?"
+            </div>
+
+            <button class="Q">What resources did you use for this?</button>
+                <div class="A"> "There were a couple. The programming was done through Visual Studio code. For designing the webpages, I used the Figma desktop app. It really helped to plan pages in advance, I used the free version which allows 3 pages, which worked well for me. Assets I just got off google, but I used pixlr to edit most the icons you see here. I also used Github to log my progress and got those stats from it. There was a fair amount of W3Schools and ChatGPT to help with more challenging issues (such as back-end) but even some Javascript functions." 
+            </div>
+        </div>
+
+        <div class="author"> 
+            <h2 style="width:400px; height:50px; text-align:center; margin-left:500px;"> About the author</h2>
+            <div class="picture"> <img src="{{ url_for('static', filename='assets/Pfp.png') }}" style="height:200px; width:200px; border-radius: 200px; float:left;" alt="Profile"> </div>
+            <p style="height:200px; width:1000px; margin-left:250px; font-size:20px; margin-top:60px;"> Hargun Singh is a fourth year UQ physiotherapy student who has a passion for all things tech related. He has experience in numerous languages such as Python, C, C++, HTML, CSS, Javascript, Swift and SpriteKit and has been developing programs over the past year. It is currently a side hustle but he hopes to one day pursue this full time and make technologies that can change the world."
+            </p>
+        </div>
+
+    <div class = "footer">
+        <p style ="float:left; padding-left:100px;"><a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">About me</a></p>
+        <p style="float:right; padding-right:100px;"> <a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">Contact</a></p>
+        <p style="padding-top:60px;"> Hargun Singh 2023 (C)</p> 
+    </div>
+    
+    </div>
+    <script src="{{ url_for('static', filename='Script.js') }}" defer></script>
+    </body> 
+    </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}"  type="text/css">
+    <meta name ="viewport" content="initial-scale=1, width=device-width">
+    <title> Home </title>
+    <div class = "navigation"> 
+        <ul> 
+            <div class="items" style="padding-top:10px;"> 
+                <li style ="text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 8.5px;"> <a class ="nav-link" href="{{ url_for('homepage') }}"> Home</a></li> 
+                <li> <a class="nav-link" href="{{ url_for('programs') }}"> Programs</a></li> 
+                <li> <a class="nav-link" href="{{ url_for('contact') }}"> Contact</a></li> 
+            </div>
+
+        <div class="socials"> 
+            <ul> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/IG.png') }}" style="width:60px; height:60px;" alt="Instagram"> </a> </img></li> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/YT.png') }}" style="width:60px; height:60px;" alt="Twitch"> </a> </img> </li>
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/Twitch.png') }}" style="width:60px; height:60px;" alt="Youtube"> </a> </img> </li>
+            </ul>
+            </div>
+        </ul>
+        
+    </div>
+
+    <div class = "container"> 
+</head>
+<body>
+    
+    <!-- Line order: right horizontal, right vertical, left vertical, left horizontal -->
+    <hr class = "line1" style="height:5px; width: 100px; border-width:0; background-color:#0AE33A; transition: transform 3s ease; float:right; margin-right:5px;">
+    <hr class = "line2" style="height:100px; width: 5px; border-width:0; background-color:#0AE33A; transition: transform 3s ease; float:right; margin-top:56px; margin-right:-100px;">
+
+    <div class ="title"> 
+    <p> Welcome! </p>
+    </div>
+    <hr class = "line3" style="height:100px; width: 5px; border-width:0; background-color:#0AE33A; transition: transform 3s ease; float:left; margin-top:320px;">
+    <hr class = "line4" style="height:5px; width: 100px; border-width:0; background-color:#0AE33A; transition: transform 3s ease; float:left; margin-top:370px; margin-left: -52.5px;">
+
+    <h1 style=" margin-top:510px; text-align:center;"> Most Recent Activity</h1>
+    <div class="banner-container"> 
+        <div class="banner-items"> 
+            <img src="{{ url_for('static', filename='assets/Graph1.png') }}" alt="Graph1" style="height:400px; width:850px;">
+        </div>
+
+        <div class="banner-items"> 
+            <img src="{{ url_for('static', filename='assets/Graph2.png') }}" alt="Graph2" style="height:400px; width:850px;">
+
+        </div>
+
+        <div class="banner-items"> 
+            <img src="{{ url_for('static', filename='assets/Graph3.png') }}" alt="Graph3" style="height:400px; width:850px;">
+
+        </div>
+
+    </div>
+
+    <div class="sign" style="margin: auto; font-size:24px; text-align:center;"> 
+        <p> Sign up below!</p>
+
+        <form id="Subscribe" action="subscribe" method="post">
+            <input type="email" id="email" name="email" placeholder = "example@gmail.com.au" required> 
+            <button type ="submit">Subscribe</button>
+            </form>
+    </div>
+
+    <div class = "footer">
+        <p style ="float:left; padding-left:100px;"><a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">About me</a></p>
+        <p style="float:right; padding-right:100px;"> <a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">Contact</a></p>
+        <p style="padding-top:60px;"> Hargun Singh 2023 (C)</p> 
+    </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='Script.js') }}"></script>
+</body> 
+</html>

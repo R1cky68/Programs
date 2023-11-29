@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}"  type="text/css">
+    <meta name ="viewport" content="initial-scale=1, width=device-width">
+    <title> Programs </title>
+    <div class = "navigation"> 
+        <ul> 
+            <div class="items" style="padding-top:10px;"> 
+                <li> <a class="nav-link" href="{{ url_for('homepage') }}"> Home</a></li> 
+                <li style ="text-decoration:underline; text-decoration-thickness: 2px; text-underline-offset: 8.5px;"> <a class ="nav-link" href="{{ url_for('programs') }}"> Programs</a></li> 
+                <li> <a class="nav-link" href="{{ url_for('contact') }}"> Contact</a></li> 
+            </div>
+           
+            <div class="socials"> 
+            <ul> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/IG.png') }}" style="width:60px; height:60px;" alt="Instagram"> </a> </img></li> 
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/YT.png') }}" style="width:60px; height:60px;" alt="Twitch"> </a> </img> </li>
+                <li> <a href="#"> <img src="{{ url_for('static', filename='assets/Twitch.png') }}" style="width:60px; height:60px;" alt="Youtube"> </a> </img> </li>
+    
+            </ul>
+            </div>
+        </ul>
+        
+    </div>
+    
+<div class = "container"> 
+</head>
+    <body>
+        <h1 style="text-align:center; margin-top:150px;"> Top programs </h1>      
+
+        <div class="programs"> 
+            
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="background-image: url('/static/Assets/Pong.png');">
+                    <h1>Pong</h1>
+                    <p>A simple recreation of the classic ATARI game </p>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url('/static/Assets/Pong.png');">
+                    <a href="https://github.com/R1cky68/Programs/tree/main/Pong.xcodeproj" style="color:white;">Github link</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="background-image: url('/static/Assets/Dodge.png');">
+                    <h1>Dodge</h1>
+                    <p>Put your keyboard skills to the test in this thrilling platformer </p>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url('/static/Assets/Dodge.png');">
+                    <a href="https://github.com/R1cky68/Programs/tree/main/Dodge.xcodeproj" style="color:white;">Github link</a>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="background-image: url('/static/Assets/Showdown.png');">
+                    <h1>Showdown</h1>
+                    <p>Engage the opponent in this revised time-sensitive taste of pokemon battling </p>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url('/static/Assets/Showdown.png');">
+                    <a href="https://github.com/R1cky68/Programs/tree/main/Showdown" style="color:white;">Github link</a>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="background-image:url('/static/Assets/Weather.png');">
+                    <h1>Weather</h1>
+                    <p>Use the API technology to get weather details from your location </p>
+                  </div>
+                  <div class="flip-card-back" style="background-image:url('/static/Assets/Weather.png');">
+                    <a href="https://github.com/R1cky68/Programs/tree/main/Weather.py" style="color:white;">Github link</a>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image:url('/static/Assets/Monitor.png');">
+                    <h1>Monitor</h1>
+                    <p>Learn about your CPU, memory and disk space with the press of a button </p>
+                </div>
+                  <div class="flip-card-back" style="background-image:url('/static/Assets/Monitor.png');">
+                    <a href= "https://github.com/R1cky68/Programs/blob/main/Monitor.cpp" style="color:white; cursor:pointer;">Github link</a>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front" style="background-image:url('/static/Assets/Writer.png');">
+                    <h1>Writer</h1>
+                    <p>With some simple lines of code, create and write your own files without lifting a finger </p>
+                  </div>
+                  <div class="flip-card-back" style="background-image:url('/static/Assets/Writer.png');">
+                    <a href="https://github.com/R1cky68/Programs/blob/main/Writer.py" style="color:white;">Github link</a>
+                  </div>
+                </div>
+              </div> 
+        
+        </div>
+            
+        <div class="showcase">  
+          <h1 style="text-align:center; margin-left:50px; margin-top:10px;"> Looking for something specific?</h1> 
+            <div style="display:flex; align-items: center; justify-content: flex-end; width:600px; margin-left:150px;"> 
+                <button class="sm"> Search by name </button>
+                <form action="/search_programs" method="get"> 
+                  <input type = "text" name="query" placeholder="Search" style="border:none; width:200px; height:40px; font-size:20px; background-color:#1E1E1E; color:white; margin-top:-10px;"> 
+                </form>
+            </div>
+              <div class="name" style ="height:450px; width: 800px; padding-top:20px; padding-left:20px; border-style:solid; border-color: white;"> 
+                <h1 style="text-align:center;"> Programs</h1>
+                  <div class="list" style="height:400px; width:800px; font-size:24px; columns:2;"> 
+                    <ul style="list-style:none; margin:auto; padding:5px;">  
+                      {% for program in programs %}
+                        <li> {{ program.name }} - {{program.language}} - <a href="{{ program.github_link }}" target="_blank">Link</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+              </div>  
+        </div>
+                 
+
+    <div class = "footer">
+      <p style ="float:left; padding-left:100px;"><a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">About me</a></p>
+      <p style="float:right; padding-right:100px;"> <a href="{{ url_for('contact') }}" style="text-decoration: none; color:black;">Contact</a></p>
+        <p style="padding-top:60px;"> Hargun Singh 2023 (C)</p> 
+    </div>
+    
+    </div>
+    <script src="{{ url_for('static', filename='Script.js') }}" defer></script>
+    </body> 
+</html>
