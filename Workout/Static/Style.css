@@ -1,0 +1,18 @@
+html{
+    background-color: aqua;
+    font-family:'Avenir next', sans-serif;
+
+}
+
+.title{
+    color:white;
+    font-weight:normal;
+}
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    margin-bottom:20px;
+}
