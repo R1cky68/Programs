@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
+    <title>Move Selector</title>
+    <script>
+    function updateMoves() {
+        console.log("Function called");
+        var pokemonSelect = document.getElementById("pokemon");
+        var moveSelect = document.getElementById("move");
+        var moveDescriptionDiv = document.getElementById("moveDescription");
+
+        // Clear existing options
+        moveSelect.innerHTML = "";
+
+        // Get selected Pokemon
+        var selectedPokemon = pokemonSelect.value;
+
+        // Select move based on the selected Pokemon
+        if (selectedPokemon === "Electivire") {
+            addMoveOption("Thunder", "Electric move with high damage.");
+            addMoveOption("Iron Tail", "Steel move with a chance to lower opponent's Defense.");
+            addMoveOption("Giga Impact", "Normal move with high power, but requires a turn to recharge.");
+            addMoveOption("Cross Chop", "Fighting move with a high critical-hit ratio.");
+        } 
+        
+        else if (selectedPokemon === "Farfetchd") {
+            addMoveOption("Brutal Swing", "Dark move that hits all adjacent Pokemon.");
+            addMoveOption("Brick Break", "Fighting move that breaks through the opponent's Light Screen and Reflect.");
+            addMoveOption("Swords Dance", "Normal move that sharply raises the user's Attack.");
+            addMoveOption("Final Gambit", "Fighting move that sacrifices the user but deals damage equal to its HP.");
+        } 
+        
+        else if (selectedPokemon === "Sceptile") {
+            addMoveOption("Leaf Blade", "Grass move with a high critical-hit ratio.");
+            addMoveOption("Dragon Pulse", "Dragon move with medium damage.");
+            addMoveOption("Focus Blast", "Fighting move with a chance to lower opponent's Special Defense.");
+            addMoveOption("Shed Tail", "Normal move that sharply raises the user's Speed.");
+        } 
+        
+        else if (selectedPokemon === "Grimmsnarl") {
+            addMoveOption("Spirit Break", "Fairy move that lowers the opponent's Special Attack.");
+            addMoveOption("Shadow Ball", "Ghost move that has a chance to lower opponent's Special Defense.");
+            addMoveOption("Bulk Up", "Fighting move that raises the user's Attack and Defense.");
+            addMoveOption("Darkest Lariat", "Dark move with high power that ignores opponent's stat changes.");
+        }
+
+        // Function to add move option with a description
+        function addMoveOption(move, description) {
+            var option = document.createElement("option");
+            option.text = move;  // Display only move name in the dropdown
+            option.value = description; // Set the value attribute to the move name
+            moveSelect.add(option);
+        }
+
+        // Add a click event to show move description when the move is selected
+        moveSelect.addEventListener("change", function() {
+            showMoveDescription(moveSelect.value);
+        });
+
+        // Function to show move description
+        function showMoveDescription(description) {
+            // Display the description underneath the move dropdown
+            moveDescriptionDiv.innerText = "Move Description: " + description;
+        }
+}
+    </script>
+</head>
+<body>
+    <ul> 
+        <li> <a href="{{ url_for('home') }}"> Teambuilder </a></li>
+    </ul>
+    <h1>Move Selector</h1>
+
+    <p> Choose your pokemon from below: </p>
+        <ul> 
+        <li> 
+            Electivire (Level 50) 
+            Ability: Motor Drive
+            Item: Leftovers
+            Thunder, Iron Tail, Giga Impact, Cross Chop
+        </li>
+
+        <li> 
+            Farfetchd (Level 50) 
+            Ability: Scrappy
+            Item: Leek
+            Brutal Swing, Brick Break, Swords Dance, Final Gambit 
+        </li>
+
+        <li> 
+            Sceptile (Level 50)
+            Ability: Overgrowth
+            Item: Life Orb
+            Leaf Blade, Dragon Pulse, Focus Blast, Shed Tail
+        </li>
+
+        <li> 
+            Grimmsnarl (Level 50)
+            Ability: Prankster
+            Item: Expert belt
+            Spirit Break, Shadow Ball, Bulk Up, False Surrender
+        </li>
+        
+    </ul>
+
+    <form method ="post" action="{{url_for('battle')}}">
+        <label for="pokemon">Select a Pokemon</label>
+        <select id ="pokemon" name="pokemon" onchange="updateMoves()">
+            <option value=""></option>
+            <option value="Electivire"> Electivire</option>
+            <option value="Farfetchd"> Farfetchd</option>
+            <option value="Sceptile"> Sceptile</option>
+            <option value="Grimmsnarl"> Grimmsnarl</option>
+        </select>
+
+        <label for="move"> Choose your move:</label>
+        <select id ="move" name="move">
+
+        </select>
+         
+        <button type="submit"> Select</button> 
+
+    </form>
+    
+    <div id="moveDescription"></div>
+
+</body>
+</html>
