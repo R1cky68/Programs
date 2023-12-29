@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='Styles.css') }}" type="text/css">  
+    <title>Login</title>
+<script> 
+function message() {
+    alert("Logged in successfully!");
+}
+
+</script>
+</head>
+
+<body>
+    <div class="container"> 
+        <div class ="nav"> 
+            <h2> Navigation</h2>
+            <ul> 
+                <li class="items" style="font-weight:bold;"> <a href="{{ url_for('login')}}">Login</a></li>
+                <li class="items"> <a href="{{ url_for('add')}}">Add</a></li>
+                <li class="items"> <a href="{{ url_for('search')}}">Search</a></li>
+            </ul>
+        </div>
+    <h1 style="text-align:center; color:#141138;"> Recipe</h1>
+    <h2 style="text-align: center; color:#141138"> Login </h1>
+    <div class = "login"> 
+        <form action="log" method="post"> 
+            <input type ="text" nullable = false id="username" name="username" placeholder = "Username">
+            <br>
+            <input type ="password" nullable = false id="password" name="password" placeholder = "Password">
+            <br>
+            <button type ="submit" onclick="message()"> Login </button>
+        </form>
+    </div>
+
+   <!--Display information-->
+   <div class="display"> 
+   <ul> 
+    {% for information in information %}
+        <li> Welcome, {{ information.username }}!</li>
+    {% endfor %}
+    </ul>
+    </div> 
+
+</div>
+<div class="footer"> 
+    <p> Hargun Singh, 2023</p>
+</div>
+</body>
+</html>

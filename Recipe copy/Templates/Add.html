@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='Styles.css') }}" type="text/css">  
+    <title>Add</title>
+    <script> 
+        function add() {
+            alert("Recipe added to list!");
+        }
+        
+        </script>
+</head>
+
+<body>
+    <div class="container"> 
+        <div class ="nav"> 
+            <h2> Navigation</h2>
+            <ul> 
+                <li class="items"> <a href="{{ url_for('login')}}">Login</a></li>
+                <li class="items" style="font-weight:bold;"> <a href="{{ url_for('add')}}">Add</a></li>
+                <li class="items"> <a href="{{ url_for('search')}}">Search</a></li>
+            </ul>
+        </div>
+        <h1 style="text-align:center; color:#141138;"> Recipe</h1>
+        <h2 style="color: #141138; text-align:center; font-style:italic; font-weight:normal;"> Add a Recipe below in just 5 easy steps! </h2>
+
+<div class="input"> 
+<form action="/append" method="post">
+    <div class="forms" style="margin-left:500px;"> 
+        <input type="text" id="name" name="name" placeholder="Name" class="stuff" required>
+    </div>
+   
+    <div class="forms" style="margin-left:700px; margin-top:50px;">    
+        <input type="text" id="difficulty" name="difficulty" placeholder="Difficulty" class="stuff" required>
+    </div>
+
+    <div class="forms" style="margin-left:750px; margin-top:75px;">    
+        <input type="number" id="time" name="time" placeholder="Time" class="stuff" required>
+    </div>
+
+    <div class="holder"> 
+        <button type="submit" class="button" onclick="add()">Add</button>
+    </div>    
+
+    <div class="forms" style="margin-left:700px;">    
+        <input type="text" id="ingredients" name="ingredients" placeholder="Ingredients" class="stuff" required>
+    </div>
+
+    <div class="forms" style="margin-left:500px; margin-top:50px;">  
+        <input type="text" id="steps" name="steps" placeholder="Steps" class="stuff" required>
+    </div>
+    
+</form>
+
+</div>
+
+<div class="current"> 
+<h2 style="margin-left:450px;">Current recipes</h2>
+<ul> 
+{% for recipe in recipes %}
+    <li> Recipe: {{ recipe.name }}</li>
+    <li> Difficulty: {{ recipe.difficulty }}</li>
+    <li> Time: {{ recipe.time }}</li>
+    <li> Ingredients: {{ recipe.ingredients }}</li>
+    <li> Steps: {{ recipe.steps }}</li>
+    <br>
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="all">  
+<ul> <h2 style="margin-left:430px;"> All recipes </h2>
+    <li> Scrambled eggs and toast, difficulty: easy, time: 5, ingredients: eggs, bread, butter, salt, pepper, steps: heat up toast with butter, scramble eggs, season</li> 
+     <li> Protein shake, difficulty: easy, time: 5, ingredients: protein powder, milk, peanut butter, chia seeds, greek yoghurt, steps: blend ingredients until smooth</li>
+     <li> Fried rice, difficulty: medium, time: 30, ingredients: rice, egg, chicken, capsicum, beans, garlic, lime, chilli, soy sauce, siracha, peanut oil, spices (paprika, salt, pepper, onion powder), steps: cut all vegetables, season chicken, oil pan, stir fry garlic and vegetables, cook chicken and egg, add cooked rice, mix and season </li>
+     <li> Grilled cheese, difficulty: easy, time: 5, ingredients: bread, butter, cheese, oil, steps: heat up bread in pan, add cheese, flip until melted </li>
+     <li> Tomato garlic pasta, difficulty: medium, time: 40, ingredients: pasta sauce, tomato paste, garlic, basil leaves, meat, seasonings (paprika, salt, pepper), cheese, tomatoes, steps: cook pasta, create sauce by mixing garlic, basil, pasta sauce, tomato paste, mix with pasta, season </li>
+     <li> Basil pesto pasta, difficulty: medium, time: 40, ingredients: pasta, basil pesto sauce, meat, parmesan cheese, basil leaves, salt, pepper, steps: cook pasta in pot, add sauce, seasonings, top with cheese </li>
+ </ul>
+
+</div>
+
+</div>
+<div class="footer"> 
+    <p> Hargun Singh, 2023</p>
+</div>
+</body>
+</html>

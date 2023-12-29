@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='Styles.css') }}" type="text/css">  
+    <title>Search</title>
+
+</head>
+
+<body>
+    <div class="container">  
+        <div class ="nav"> 
+            <h2> Navigation</h2>
+            <ul> 
+                <li class="items"> <a href="{{ url_for('login')}}">Login</a></li>
+                <li class="items"> <a href="{{ url_for('add')}}">Add</a></li>
+                <li class="items" style="font-weight:bold;"> <a href="{{ url_for('search')}}">Search</a></li>
+            </ul>
+        </div>
+    
+    <h1 style="text-align:center; color:#141138;"> Recipe</h1>
+    <h2 style="text-align:center; color:#141138;">Search current recipes</h2>
+
+    <div class = "box">
+        <form action="/filter" method="get"> 
+            <input type ="text" name="query" placeholder="Enter recipe..." style="margin:auto; margin-left:350px; font-size:32px; margin-top:60px;">
+
+        </form>
+        <ul> {% for recipe in recipes %}
+            <li> {{ recipe.name }} - {{ recipe.difficulty }} - {{ recipe.time }} - {{ recipe.ingredients }} - {{ recipe.steps }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</div>
+<div class="footer"> 
+    <p> Hargun Singh, 2023</p>
+</div>
+</body>
+</html>
